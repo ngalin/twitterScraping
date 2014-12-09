@@ -11,16 +11,16 @@ Input:
 Output (returns all tweets that match the search term, during the specified time period):
 - # of tweets scraped for the time period
 - tweets:
-  [user twitter handle]
-  [user name]
-  [user twitter id]
-  [is tweet in reply to another?]
-  [does tweet have a parent?]
-  [timestamp]
-  [hashtags/mentions]
-  [link to image of user]
-  [tweet text]
-  [links included in tweet]
-  [how many times tweet favorited]
-  [how many retweets does tweet have]
+  [user twitter handle, string]
+  [user name, string]
+  [user twitter id, int]
+  [is tweet in reply to another?, bool]
+  [does tweet have a parent?, bool]
+  [timestamp, int, unix timestamp]
+  [hashtags/mentions, array of strings]
+  [link to image of user, url]
+  [tweet text, string]
+  [links included in tweet, array of urls]
+  [how many times tweet favorited, int]
+  [how many retweets does tweet have, int]
 
