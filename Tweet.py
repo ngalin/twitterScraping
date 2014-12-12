@@ -21,8 +21,9 @@ class Tweet:
     self.text = None
     self.mentions = None
     self.links = None
-    self.favorite = None
-    self.retweets = None
+    self.favorite = 0
+    self.retweets = 0
+    self.reply = 0
     self.image_url = None
     Tweet.count += 1
 
@@ -32,15 +33,30 @@ class Tweet:
 
   def displayTweet(self):
     print "Tweet " + self.id + ", entries are:"
-    print "time of tweet: " + self.time
+    print "time of tweet: " + str(self.time)
     print "user handle: " + self.user_handle
     print "user name: " + self.user_name
     print "user_img: " + self.image_url
     print "tweet text: " + self.text
-    print "mentions: " + self.mentions
+    print "mentions: " + str(self.mentions)
     print "links to: " + self.links
-    print "number favorites: " + self.favorite
-    print "number retweets: " + self.retweets
-    print "is tweet in reply: " + self.is_reply
-    print "does tweet have parent: " + self.has_parent
+    print "number favorites: " + str(self.favorite)
+    print "number retweets: " + str(self.retweets)
+    print "number replies: " + str(self.reply)
+    print "is tweet in reply: " + str(self.is_reply)
+    print "does tweet have parent: " + str(self.has_parent)
 
+  def printTweet(self):
+    print str(self.id) + '\t' + \
+      self.user_handle + '\t' + \
+      self.user_name + '\t' + \
+      self.image_url + '\t' + \
+      str(self.time) + '\t' + \
+      self.text + '\t' + \
+      self.mentions + '\t' + \
+      self.links + '\t' + \
+      str(self.favorites) + '\t' + \
+      str(self.retweets) + '\t' + \
+      str(self.reply) + '\t' + \
+      str(self.is_reply) + '\t' + \
+      str(self.has_parent) + '\t'
