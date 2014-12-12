@@ -125,7 +125,7 @@ def getTweetText(soup):
   text = dictOfHTMLMatches['text']
   tweet_text = soup.findAll('p',text)
   h = html2text.html2text(str(tweet_text))
-  return h
+  return h.replace('\n','')
 
 def getTweetImageUrl(soup):
   image_url = soup.findAll('img',src=True)

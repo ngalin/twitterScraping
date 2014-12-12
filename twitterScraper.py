@@ -23,3 +23,13 @@ listOfTweets = getTweets.scrapeTweets(matchPattern,fromTime,untilTime)
 
 for tweet in listOfTweets:
   tweet.printTweet()
+
+
+#
+#
+##debug:
+#for idx,tweet in enumerate(listOfTweets):
+#  print str(idx) + ' ' + tweet.links
+#
+#for tweet in listOfTweets:
+#  print tweet.image_url
