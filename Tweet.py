@@ -46,18 +46,17 @@ class Tweet:
     print "is tweet in reply: " + str(self.is_reply)
     print "does tweet have parent: " + str(self.has_parent)
 
-  def printTweet(self):
-    print str(self.id) + ',' + \
-      self.user_handle + ',' + \
-      self.user_name + ',' + \
-      self.image_url + ',' + \
-      str(self.time) + ',' + \
-      self.mentions + ',' + \
-      self.text + ',' + \
-      str(self.favorites) + ',' + \
-      str(self.retweets) + ',' + \
-      str(self.reply) + ',' + \
-      str(self.is_reply) + ',' + \
-      str(self.has_parent) + ','
+  def __str__(self): #return string, not print statement,
+    return str(self.id) + ';' + \
+      self.user_handle + ';' + \
+      self.user_name + ';' + \
+      self.image_url + ';' + \
+      str(self.time) + ';' + \
+      self.mentions + ';' + \
+      self.text + ';' + \
+      str(self.favorites) + ';' + \
+      str(self.retweets) + ';' + \
+      str(self.reply) + ';' + \
+      str(self.is_reply) + ';' + \
+      str(self.has_parent) + ';'
 #      self.links + '\t' + \
-#            self.text + '\t' + \
